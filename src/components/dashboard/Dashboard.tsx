@@ -1,0 +1,20 @@
+// SomePage.tsx or Dashboard.tsx
+import React from "react";
+import TransactionFormWizard from "../transactionForm/TransactionFormWizard";
+import TransactionList from "./TransactionList";
+//import ExportWizard from "../export/ExportWizard";
+
+const Dashboard: React.FC = () => {
+  return (
+    <div className="p-4">
+      <h1 className="text-2xl font-bold mb-4 text-zinc-800 ">Dashboard</h1>
+      <div className="flex flex-col gap-y-4">
+        <TransactionFormWizard />
+        <TransactionList />
+        {/*<ExportWizard />*/}
+      </div>
+    </div>
+  );
+};
+
+export default Dashboard;
