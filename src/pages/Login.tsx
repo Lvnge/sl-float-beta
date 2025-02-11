@@ -5,7 +5,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../services/firebaseConfig";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -146,15 +146,14 @@ const Login = () => {
           Sign in with Google
         </button>
 
-        <p className="mt-6 text-center text-sm text-gray-600">
-          Don't have an account?
-          <a
-            href="/register"
-            className="font-semibold text-indigo-600 hover:text-indigo-500"
+        <p className="mt-6 text-center text-sm text-gray-600 ">
+          Don't have an account?{" "}
+          <Link
+            to="/register"
+            className="text-sm font-semibold text-indigo-600 hover:text-indigo-500"
           >
-            {" "}
             Register
-          </a>
+          </Link>
         </p>
       </div>
     </div>
