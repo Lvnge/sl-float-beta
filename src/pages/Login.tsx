@@ -41,7 +41,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-start px-6 py-32 lg:px-8 bg-gray-50">
+    <div className="flex min-h-screen flex-col items-center justify-start px-6 py-12 sm:py-32 lg:px-8 bg-gray-50">
       <div className="flex flex-col items-center mb-8">
         <svg
           xmlns="http://www.w3.org/2000/svg"
