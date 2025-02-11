@@ -86,7 +86,7 @@ const SideBar: React.FC = () => {
   const [isLogoutModalOpen, setLogoutModalOpen] = useState(false);
 
   return (
-    <div className="flex flex-col w-16 sm:min-w-72 bg-zinc-800 min-h-screen ">
+    <div className="flex flex-col w-16 sm:min-w-72 bg-zinc-800 h-screen ">
       <div className="flex flex-col grow-1 overflow-y-auto gap-y-5 sm:px-6 ">
         {/* Logo/Title */}
         <div className="flex justify-center items-center sm:items-center sm:justify-normal shrink-0 h-16 text-zinc-200 ">
