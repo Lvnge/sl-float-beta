@@ -133,8 +133,10 @@ const SideBar: React.FC = () => {
                 ))}
               </ul>
             </li>
+            {/* Divider */}
+            <li className="border-t border-zinc-600/50 sm:hidden"></li>
             {/* Account links */}
-            <li className="mt-auto mb-2 ">
+            <li className="sm:mt-auto mb-2 ">
               <ul
                 role="list"
                 className="flex-1 flex flex-col sm:-mx-2 space-y-1 items-center sm:items-stretch"
