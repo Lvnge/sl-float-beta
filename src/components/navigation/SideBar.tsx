@@ -86,13 +86,13 @@ const SideBar: React.FC = () => {
   const [isLogoutModalOpen, setLogoutModalOpen] = useState(false);
 
   return (
-    <div className="flex flex-col min-w-72 bg-zinc-800 min-h-screen  ">
-      <div className="flex flex-col grow-1 overflow-y-auto gap-y-5 px-6">
+    <div className="flex flex-col w-16 sm:min-w-72 bg-zinc-800 min-h-screen ">
+      <div className="flex flex-col grow-1 overflow-y-auto gap-y-5 sm:px-6 ">
         {/* Logo/Title */}
-        <div className="flex items-center shrink-0 h-16 text-zinc-200">
+        <div className="flex justify-center items-center sm:items-center sm:justify-normal shrink-0 h-16 text-zinc-200 ">
           {/* Logo/Title */}
           <svg
-            className="h-10 w-10"
+            className="h-8 w-8 sm:h-10 sm:w-10"
             width="67"
             height="41"
             viewBox="0 0 67 41"
@@ -104,14 +104,17 @@ const SideBar: React.FC = () => {
               fill="currentColor"
             ></path>
           </svg>
-          <h1 className="font-medium ml-2">sl-float</h1>
+          <h1 className="font-medium ml-2 hidden sm:block">sl-float</h1>
         </div>
         {/* Navigation and account links */}
         <nav className="flex flex-col flex-1 text-zinc-400 gap-y-7">
           <ul role="list" className="flex flex-col gap-y-7 flex-1">
             {/* Navigation links */}
             <li>
-              <ul role="list" className="flex-1 flex flex-col -mx-2 space-y-1">
+              <ul
+                role="list"
+                className="flex-1 flex flex-col sm:-mx-2 space-y-1 items-center sm:items-stretch"
+              >
                 {navLinks.map(({ label, to, icon }) => (
                   <li key={to}>
                     <NavLink
@@ -120,19 +123,22 @@ const SideBar: React.FC = () => {
                       className={({ isActive }) =>
                         `${
                           isActive ? "bg-zinc-900 text-zinc-200" : "bg-zinc-800"
-                        } hover:bg-zinc-900 hover:text-zinc-200 p-2 rounded-md flex items-center gap-x-3 text-sm font-semibold leading-6`
+                        } hover:bg-zinc-900 hover:text-zinc-200 p-2 rounded-md flex items-center gap-x-3 text-sm font-semibold leading-6 justify-center sm:justify-normal w-fit sm:w-full`
                       }
                     >
                       {icon}
-                      <span>{label}</span>
+                      <span className="hidden sm:block">{label}</span>
                     </NavLink>
                   </li>
                 ))}
               </ul>
             </li>
             {/* Account links */}
-            <li className="mt-auto mb-2">
-              <ul role="list" className="flex-1 flex flex-col -mx-2 space-y-1">
+            <li className="mt-auto mb-2 ">
+              <ul
+                role="list"
+                className="flex-1 flex flex-col sm:-mx-2 space-y-1 items-center sm:items-stretch"
+              >
                 {accountLinks.map(({ label, to, icon }) =>
                   label === "Log out" ? (
                     <li key={to}>
@@ -140,10 +146,10 @@ const SideBar: React.FC = () => {
                         onClick={() => setLogoutModalOpen(true)}
                         className="bg-zinc-800 hover:bg-red-900 hover:text-zinc-200
                         hover:cursor-pointer
-                        p-2 rounded-md flex items-center gap-x-3 text-sm font-semibold leading-6 w-full text-left"
+                        p-2 rounded-md flex items-center gap-x-3 text-sm font-semibold leading-6 text-left justify-center sm:justify-normal w-fit sm:w-full"
                       >
                         {icon}
-                        <span>{label}</span>
+                        <span className="hidden sm:block">{label}</span>
                       </button>
                     </li>
                   ) : (
@@ -156,11 +162,11 @@ const SideBar: React.FC = () => {
                             isActive
                               ? "bg-zinc-900 text-zinc-200"
                               : "bg-zinc-800"
-                          } hover:bg-zinc-900 hover:text-zinc-200 p-2 rounded-md flex items-center gap-x-3 text-sm font-semibold leading-6`
+                          } hover:bg-zinc-900 hover:text-zinc-200 p-2 rounded-md flex items-center gap-x-3 text-sm font-semibold leading-6 justify-center sm:justify-normal w-fit sm:w-full `
                         }
                       >
                         {icon}
-                        <span>{label}</span>
+                        <span className="hidden sm:block">{label}</span>
                       </NavLink>
                     </li>
                   )
