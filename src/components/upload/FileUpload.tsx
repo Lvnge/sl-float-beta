@@ -162,10 +162,10 @@ const FileUpload: React.FC = () => {
 
   return (
     <div className="max-w-sm p-4 bg-zinc-800 rounded-lg shadow-sm">
-      <h2 className="text-xl font-bold mb-4 text-zinc-200">
+      <h2 className="text-xl font-bold mb-7 text-zinc-200 ">
         Upload Excel File
       </h2>
-      <div className="flex flex-col space-y-4 p-4">
+      <div className="flex flex-col space-y-4  mb-4">
         <div>
           <label
             htmlFor="file-upload"
@@ -178,7 +178,7 @@ const FileUpload: React.FC = () => {
             type="file"
             accept=".xlsx, .xls"
             onChange={handleFileChange}
-            className="w-fit block text-sm text-zinc-200 file:mr-4 file:px-4 file:py-2 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-zinc-600 file:text-zinc-200 file:cursor-pointer"
+            className="w-fit block text-sm text-zinc-200 file:mr-2 file:px-4 file:py-2 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-zinc-600 file:text-zinc-200 file:cursor-pointer"
           />
         </div>
         <button
