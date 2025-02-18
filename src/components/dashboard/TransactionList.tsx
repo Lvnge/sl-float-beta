@@ -94,7 +94,12 @@ const TransactionList: React.FC = () => {
                   {txn.category}
                 </span>
                 <span className="text-sm text-zinc-300">
-                  {new Date(txn.date).toLocaleDateString()}
+                  {new Date(txn.date).toLocaleDateString("en-US", {
+                    timeZone: "America/Mexico_City", // Adjust for your time zone
+                    year: "numeric",
+                    month: "numeric",
+                    day: "numeric",
+                  })}
                 </span>
               </div>
               <div className="flex items-center gap-4">
@@ -105,7 +110,10 @@ const TransactionList: React.FC = () => {
                       : "text-red-400"
                   }
                 >
-                  ${txn.amount.toFixed(2)}
+                  $
+                  {typeof txn.amount === "number"
+                    ? txn.amount.toFixed(2)
+                    : "N/A"}
                 </span>
                 <div className="flex gap-3">
                   <button
