@@ -101,8 +101,6 @@ const TransactionList: React.FC = () => {
                     day: "numeric",
                   })}
                 </span>
-              </div>
-              <div className="flex items-center gap-4">
                 <span
                   className={
                     txn.transactionType === "Income"
@@ -115,6 +113,8 @@ const TransactionList: React.FC = () => {
                     ? txn.amount.toFixed(2)
                     : "N/A"}
                 </span>
+              </div>
+              <div className="flex items-center gap-2">
                 <div className="flex gap-3">
                   <button
                     onClick={() => handleEdit(txn.id)}
