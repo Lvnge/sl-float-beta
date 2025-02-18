@@ -4,7 +4,6 @@ import TransactionFormWizard from "../transactionForm/TransactionFormWizard";
 import TransactionList from "./TransactionList";
 //import ExportWizard from "../export/ExportWizard";
 import FileUpload from "../upload/FileUpload";
-//import DownloadTemplateEnhanced from "../common/DownloadTemplate";
 
 const Dashboard: React.FC = () => {
   return (
@@ -15,7 +14,6 @@ const Dashboard: React.FC = () => {
         <TransactionList />
         <FileUpload />
         {/* <ExportWizard />*/}
-        {/*<DownloadTemplateEnhanced />*/}
       </div>
     </div>
   );

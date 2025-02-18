@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as XLSX from "xlsx";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
+import DownloadTemplate from "../common/DownloadTemplate";
 
 interface RowData {
   Category: string;
@@ -166,6 +167,13 @@ const FileUpload: React.FC = () => {
         Upload Excel File
       </h2>
       <div className="flex flex-col space-y-4  mb-4">
+        <div className="flex flex-col w-fit gap-2">
+          <p className="text-sm font-semibold text-zinc-200">
+            Don't have a template?
+          </p>
+
+          <DownloadTemplate />
+        </div>
         <div>
           <label
             htmlFor="file-upload"
@@ -178,7 +186,7 @@ const FileUpload: React.FC = () => {
             type="file"
             accept=".xlsx, .xls"
             onChange={handleFileChange}
-            className="w-fit block text-sm text-zinc-200 file:mr-2 file:px-4 file:py-2 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-zinc-600 file:text-zinc-200 file:cursor-pointer"
+            className="w-fit block text-sm text-zinc-200 file:mr-2 file:px-4 file:py-2 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-zinc-200 file:text-zinc-800 file:cursor-pointer"
           />
         </div>
         <button
