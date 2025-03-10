@@ -3,7 +3,7 @@ import React from "react";
 import TransactionFormWizard from "../transactionForm/TransactionFormWizard";
 import TransactionList from "./TransactionList";
 //import ExportWizard from "../export/ExportWizard";
-import FileUpload from "../upload/FileUpload";
+//import FileUpload from "../upload/FileUpload";
 
 const Dashboard: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const Dashboard: React.FC = () => {
       <div className="flex flex-col gap-y-4">
         <TransactionFormWizard />
         <TransactionList />
-        <FileUpload />
+        {/*<FileUpload />*/}
         {/* <ExportWizard />*/}
       </div>
     </div>
